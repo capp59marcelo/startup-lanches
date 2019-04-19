@@ -38,7 +38,7 @@ function criarListaIngredientes(compras)
       idListarCompras.insertAdjacentHTML('beforeend', `
           <div class="card vertical" style="padding: 15px;">
               <div class="container-informacoes">
-                  <img style="height: 50px; width: 50px;" src="https://img.huffingtonpost.com/asset/5c6b1937360000790f6afb04.png?ops=scalefit_630_noupscale" />
+                  <img style="height: 50px; width: 50px;" src="./imagens/lanche.png" />
                   <div style="padding-left:5px;display:flex;flex-direction:column;width: 100%">
                       <h4 style="margin-bottom: 0px;">${compra.nomeLanche}</h4>
                       <h5 style="margin-top: 0px;"> ${ converterValorToMoeda(compra.valor)}</h6>
