@@ -1,0 +1,123 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+nav,
+nav a
+{
+    line-height: 64px !important;
+}
+.header-principal
+{
+    height: 140px;
+    min-height: 140px;
+    background-color: #00bcd4
+}
+
+.container-opcoes
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.container-botao
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-carrinho
+{
+    position: absolute !important;
+    right: 20px;
+    top: 60px;
+}
+
+.container-carrinho > .badge
+{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    padding: 3px;
+    background: green;
+}
+.container-carrinho > a > .icon-carrinho
+{
+    height: 50px;
+    width: 40px;
+    padding-left: 5px;
+    padding-top: 9px;
+}
+
+.container-lanche{
+    overflow-y: auto;
+    height: 100%;
+}
+
+.container-informacoes{
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.container-preco-btn
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: end;
+    right: 10px;
+    top: 10px;
+}
+
+
+
+/*/// Pagina Personalizado ////*/
+.container-personalizado
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.lista-ingredientes
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.container-header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lista-ingredientes .container-botoes
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-btn-valor
+{
+    width: 100%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 10px;
+}
