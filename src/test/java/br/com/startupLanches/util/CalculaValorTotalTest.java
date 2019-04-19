@@ -56,9 +56,9 @@ public class CalculaValorTotalTest
 				new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 				new Ingrediente("Ovo", new BigDecimal(0.80)), new Ingrediente("Queijo", new BigDecimal(1.50)));
 
-		BigDecimal valorTotalLight = calculaValorTotal
-				.calculaValorIngredientes(calculaValorTotal.carregaIngredientes(ingredientes), "Light");
+		BigDecimal valorTotalLight = calculaValorTotal.calculaValorIngredientes(calculaValorTotal.carregaIngredientes(ingredientes), "Light");
 		BigDecimal valorEsperado = new BigDecimal(5.13);
+		
 		valorEsperado = valorEsperado.setScale(2, RoundingMode.HALF_UP);
 		assertEquals(valorEsperado, valorTotalLight);
 	}
@@ -70,9 +70,9 @@ public class CalculaValorTotalTest
 				new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 				new Ingrediente("Ovo", new BigDecimal(0.80)), new Ingrediente("Queijo", new BigDecimal(1.50)));
 
-		BigDecimal valorTotalLight = calculaValorTotal
-				.calculaValorIngredientes(calculaValorTotal.carregaIngredientes(ingredientes), "Queijo");
+		BigDecimal valorTotalLight = calculaValorTotal.calculaValorIngredientes(calculaValorTotal.carregaIngredientes(ingredientes), "Queijo");
 		BigDecimal valorEsperado = new BigDecimal(5.70);
+		
 		valorEsperado = valorEsperado.setScale(2, RoundingMode.HALF_UP);
 		assertEquals(valorEsperado, valorTotalLight);
 	}
@@ -84,8 +84,8 @@ public class CalculaValorTotalTest
 				.carregaIngredientes(Arrays.asList(new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 						new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 						new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
-						new Ingrediente("Queijo", new BigDecimal(1.50)))),
-				"Hamburger de Carne");
+						new Ingrediente("Queijo", new BigDecimal(1.50)))), "Hamburger de Carne");
+		
 		BigDecimal valorEsperado = new BigDecimal(7.50);
 		valorEsperado = valorEsperado.setScale(2, RoundingMode.HALF_UP);
 		assertEquals(valorEsperado, valorTotalLight);
@@ -98,8 +98,8 @@ public class CalculaValorTotalTest
 				.carregaIngredientes(Arrays.asList(new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 						new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 						new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
-						new Ingrediente("Queijo", new BigDecimal(1.50)))),
-				"Queijo");
+						new Ingrediente("Queijo", new BigDecimal(1.50)))), "Queijo");
+		
 		BigDecimal valorEsperado = new BigDecimal(10.50);
 		valorEsperado = valorEsperado.setScale(2, RoundingMode.HALF_UP);
 		assertEquals(valorEsperado, valorTotalLight);
@@ -113,8 +113,8 @@ public class CalculaValorTotalTest
 				.carregaIngredientes(Arrays.asList(new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 						new Ingrediente("Queijo", new BigDecimal(1.50)),
 						new Ingrediente("Queijo", new BigDecimal(1.50)),
-						new Ingrediente("Queijo", new BigDecimal(1.50)))),
-				"Queijo");
+						new Ingrediente("Queijo", new BigDecimal(1.50)))), "Queijo");
+		
 		BigDecimal valorEsperado = new BigDecimal(6.00);
 		valorEsperado = valorEsperado.setScale(2, RoundingMode.HALF_UP);
 		assertEquals(valorEsperado, valorTotalLight);
@@ -127,8 +127,7 @@ public class CalculaValorTotalTest
 				.carregaIngredientes(Arrays.asList(new Ingrediente("Hamburger de Carne", new BigDecimal(3.00)),
 						new Ingrediente("Queijo", new BigDecimal(1.50)),
 						new Ingrediente("Queijo", new BigDecimal(1.50)),
-						new Ingrediente("Queijo", new BigDecimal(1.50)))),
-				"Light");
+						new Ingrediente("Queijo", new BigDecimal(1.50)))), "Light");
 		BigDecimal valorEsperado = new BigDecimal(7.50);
 		valorEsperado = valorEsperado.setScale(2, RoundingMode.HALF_UP);
 		assertEquals(valorEsperado, valorTotalLight);
